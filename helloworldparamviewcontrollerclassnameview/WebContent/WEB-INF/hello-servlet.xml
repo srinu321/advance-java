@@ -1,0 +1,14 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean class = "org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+<bean name = "/hello.dsp" class ="C:\Users\divya\Documents\programs\adavance java\helloworldparamviewcontrollerclassnameview\src\controller\HelloController.java">
+<property name="viewName" value = "success"></property>
+</bean>
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value = "/"></property>
+<property name="suffix" value = "jsp"></property>
+</bean>
+
+
+</beans>

@@ -1,0 +1,50 @@
+package com.dss.jdbcpack;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		Properties pp = new Properties();
+		pp.load(new FileInputStream("C:/Users/divya/Documents/programs/adavance java/Jdbc/src/com/dss/jdbcpack/oracle.properties"));
+
+		System.out.println(pp.getProperty("user"));
+		System.out.println(pp.getProperty("password"));
+		Class.forName(pp.getProperty("driver"));
+		Connection con = DriverManager.getConnection(pp.getProperty("url"),pp);
+		System.out.println(con);
+		PreparedStatement pst = con.prepareStatement("insert into student(?,?,?)");
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("enter id");
+			int i = sc.nextInt();
+			pst.setInt(1, i);
+			System.out.println("enter name");
+			String na = sc.next();
+			pst.setString(2, na);
+			System.out.println("enter emailid");
+			String em = sc.next();
+			pst.setString(3, em);
+			int is =pst.executeUpdate();
+			System.out.println("if u want enter more details press 1 if not any number is fine"+is);
+			int yes= sc.nextInt();
+			if(yes==1){
+				
+			}
+			else{
+				System.exit(0);
+			}
+			
+		}
+	}
+
+}

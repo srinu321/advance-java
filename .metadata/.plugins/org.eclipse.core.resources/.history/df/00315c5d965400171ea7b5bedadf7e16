@@ -1,0 +1,29 @@
+package com.dss.jdbcpack;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+//import java.sql.Statement;
+import java.sql.Statement;
+
+public class FirstApplication {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection con = DriverManager.getConnection("jdbc:oracLe:thin:@localhost:1521:xe","srinu","srinu");
+		System.out.println("created");
+		System.out.println(con);
+		Statement st =	con.createStatement();
+		String st11 = "create table divya(id number,name varchar2(50) ,emaild varchar2(50)";
+		boolean bs=st.execute(st11);
+		System.out.println(bs);;
+		String st1 = "insert into divya values(111,'srinivas','srinivasms326@gmail.com')";
+int b=st.executeUpdate(st1);
+//con.commit();
+System.out.println(b);
+System.out.println("created succefully"); 
+
+	}
+
+}

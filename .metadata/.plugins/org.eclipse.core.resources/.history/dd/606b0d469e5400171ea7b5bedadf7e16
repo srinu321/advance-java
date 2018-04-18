@@ -1,0 +1,47 @@
+package com.dss.jdbcpack;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+//import java.sql.Statement;
+import java.sql.Statement;
+
+public class FirstApplication {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection con = DriverManager.getConnection("jdbc:oracLe:thin:@localhost:1521:xe","srinu","srinu");
+		System.out.println("created");
+		System.out.println(con);
+		Statement st =	con.createStatement();
+		//String st11 = "create table divya(id number,name varchar2(50) ,emaild varchar2(50))";
+		//boolean bs=st.execute(st11);
+		//System.out.println(bs);;
+		String st1 = "insert into divya values(111,'srinivas','srinivasms326@gmail.com')";
+int b=st.executeUpdate(st1);
+//con.commit();
+System.out.println(b);
+System.out.println("created succefully"); 
+String sms = "select * from student";
+ResultSet rs=st.executeQuery(sms);
+ResultSetMetaData msd= rs.getMetaData();
+
+System.out.println(msd.getColumnCount());
+for(int i=1;i<=3;i++){
+	System.out.println(msd.getColumnName(i));
+	System.out.println(i+" "+msd.getColumnTypeName(i));
+}
+
+while(rs.next()){
+	System.out.print(rs.getInt(1));
+	System.out.print("  ");
+	System.out.print(rs.getString(2));
+	System.out.print(" ");
+	System.out.println(rs.getString(3));
+}
+	}
+
+}

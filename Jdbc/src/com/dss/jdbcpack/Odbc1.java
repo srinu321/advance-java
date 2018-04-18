@@ -1,0 +1,25 @@
+package com.dss.jdbcpack;
+import java.sql.*;
+import java.util.Enumeration;
+public class Odbc1 {
+
+	@SuppressWarnings({ "rawtypes" })
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try{
+		Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		Connection con = DriverManager.getConnection("jdbc:odbc:ds", "srinu", "srinu");
+		System.out.println(con);
+		}
+		catch(Exception se){
+			System.out.println(se);
+		}
+		Enumeration e = DriverManager.getDrivers();
+		
+		while(e.hasMoreElements()){
+	Driver d 	=(Driver) e.nextElement();
+	System.out.println(d.getClass().getName());
+		}
+	}
+
+}

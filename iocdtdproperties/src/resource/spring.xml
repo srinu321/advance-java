@@ -1,0 +1,21 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+
+
+<bean class= "bean.Test" id = "t">
+
+
+<property name="ps">
+<props>
+<prop key = "driver class">oracle.jdbc.OracleDriver</prop>
+<prop key = "url">jdbc:oracle:thin:@localhost:1521:xe</prop>
+<prop key = "user">srinu</prop>
+<prop key = "password">srinu</prop>
+</props>
+
+</property>
+</bean>
+
+	</beans>

@@ -1,0 +1,21 @@
+1499816400333	Rename resource 'helloworld-servlet.xml'
+1499818716771	Rename package 'com.ds.controller'
+1499819373539	Move 'hello-servlet.xml' to 'WebContent'
+1499819383346	Move 'web.xml' to 'build'
+1499819411076	Move 'web.xml' to 'WebContent'
+1499819427501	Move 'web.xml' to 'WEB-INF'
+1499819431363	Move 'hello-servlet.xml' to 'WEB-INF'
+1499819438548	Move file
+1499819736884	Delete elements
+1499819791146	Delete element
+1499828175799	Copy package
+1499828205332	Copy file
+1499828247098	Copy file
+1499828262912	Move 'hello-servlet.xml' to 'WEB-INF'
+1499828277605	Copy file
+1499828309660	Copy file
+1499835309432	Copy package
+1499835327124	Copy file
+1499835335567	Copy file
+1499835345684	Copy file
+1499835368154	Copy file

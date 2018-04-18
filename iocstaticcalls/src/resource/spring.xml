@@ -1,0 +1,14 @@
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean class = "bean.Car" id = "c"></bean>
+<bean class ="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+<property name="staticMethod" value = "bean.Car.setCarname"></property>
+<property name="arguments">
+<list>
+<value>audi s7</value>
+</list>
+</property>
+</bean>
+</beans>

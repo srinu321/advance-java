@@ -1,0 +1,30 @@
+package com.dss.jdbcpack;
+import java.sql.*;
+import java.util.Enumeration;
+public class Odbc1 {
+
+	@SuppressWarnings({ "rawtypes" })
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try{
+		Class.forName("sun.jdb.odbc.JdbcOdbcDriver");
+		Connection con = DriverManager.getConnection("jdbc:odbc:srinu", "srinu", "srinu");
+		System.out.println(con);
+Statement st =	con.createStatement();
+String st1 = "create table student(id number,name varchar2(50),email varchar2(50))";
+boolean b=st.execute(st1);
+System.out.println(b);
+System.out.println("created succefully");
+		}
+		catch(Exception se){
+			System.out.println(se);
+		}
+		Enumeration e = DriverManager.getDrivers();
+		
+		while(e.hasMoreElements()){
+	Driver d 	=(Driver) e.nextElement();
+	System.out.println(d.getClass().getName());
+		}
+	}
+
+}

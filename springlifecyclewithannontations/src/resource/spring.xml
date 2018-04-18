@@ -1,0 +1,16 @@
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-init-method="myInit" default-destroy-method="myDestroy" >
+
+<bean class = "bean.Test" id = "t">
+
+<property name="driver" value="oracle.jdbc.OracleDriver"></property>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+<property name="user" value ="srinu"></property>
+<property name="pass" value="srinu"></property>
+</bean>
+<!-- <bean class = "org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
+<bean class ="bean.Test1" id = "t1"></bean>
+<bean class ="bean.Test2" id = "t2"></bean>
+</beans>

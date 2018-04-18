@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+
+
+<bean class= "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+
+<property name="location" value = "resource/spring1.properties">
+</property>
+</bean>
+<bean id ="c" class = "bean.Test">
+<property name="driver" value ="${driver}"></property>
+<property name="url" value ="${url}"></property>
+<property name="user" value ="${user}"></property>
+<property name="pass" value ="${pass}"></property>
+</bean>
+
+
+	</beans>

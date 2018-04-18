@@ -1,0 +1,16 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean class = "Bean.Car" id = "c">
+<property name="carname" value = "verna"></property>
+<property name="emodel">
+<bean class = "Bean.Engien">
+
+<property name="modelyear" value ="2015"></property>
+</bean>
+
+
+</property>
+</bean>
+
+</beans>

@@ -1,0 +1,5 @@
+#GlassFish 3
+#Tue Jul 18 00:37:23 EDT 2017
+org.eclipse.jst.jee.server\:webserviceshopdetails=C\:\\Program Files\\java_ee_sdk-7u3\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\webserviceshopdetails
+org.eclipse.jst.jee.server\:webservicecomplexdatatypesandinterface=C\:\\Program Files\\java_ee_sdk-7u3\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\webservicecomplexdatatypesandinterface
+org.eclipse.jst.jee.server\:webservicewithretriveandadd=C\:\\Program Files\\java_ee_sdk-7u3\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\webservicewithretriveandadd

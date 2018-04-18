@@ -1,0 +1,14 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean class= "org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+<bean class= "Bean.Test" id = "t">
+
+<property name="driver" value = "oracle.jdbc.OracleDriver" />
+ <property name="url" value = "jdbc:oracle:thin:@localhost:1521:xe"/>
+<!-- <property name="user" value = "srinu"/>
+<property name="password" value = "srinu"></property> -->
+</bean>
+
+
+</beans>

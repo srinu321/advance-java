@@ -1,0 +1,15 @@
+package com.dss.service;
+
+import javax.xml.ws.Endpoint;
+
+import com.dss.service.Catlog;
+
+public class Withoutserver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Endpoint.publish("http://localhost:7899/Catlog",new Catlog());
+
+	}
+
+}

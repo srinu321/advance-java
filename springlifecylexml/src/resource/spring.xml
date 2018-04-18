@@ -1,0 +1,13 @@
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean class = "bean.Test" id = "t" init-method ="myInit" destroy-method="myDestroy">
+
+<property name="driver" value="oracle.jdbc.OracleDriver"></property>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+<property name="user" value ="srinu"></property>
+<property name="pass" value="srinu"></property>
+</bean>
+
+</beans>

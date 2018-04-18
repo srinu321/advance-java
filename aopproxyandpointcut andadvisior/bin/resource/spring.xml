@@ -1,0 +1,29 @@
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+<bean class = "bussiness.Bank" id ="bb">
+</bean>
+<bean class = "service.LogBeforeBo" id ="sb">
+</bean>
+<bean class = "service.DepositPointCut" id ="sdpc">
+</bean>
+<bean class = "org.springframework.aop.support.DefaultPointcutAdvisor" id ="adpoint">
+<property name="advice" ref = "sb"></property>
+<property name="pointcut" ref = "sdpc"></property>
+</bean>
+<bean class = "org.springframework.aop.framework.ProxyFactoryBean" id ="pfb">
+<property name="target" ref ="bb"></property>
+<property name="interceptorNames">
+<list>
+<value>adpoint</value>
+</list>
+
+</property>
+</bean>
+
+
+
+
+</beans>
